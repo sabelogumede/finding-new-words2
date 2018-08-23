@@ -5,6 +5,9 @@
 /* @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"; */
 
 /* <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto:300,400,500,700,900" rel="stylesheet"> */
+iframe {
+    width: 100% !important;
+}
 
 body {
     /* font-family: 'Poppins', sans-serif; */
