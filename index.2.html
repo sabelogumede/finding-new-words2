@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Finding New Words</title>
+        <!-- favicon -->
+        <link rel="shortcut icon" href="images/favicon-16x16.png">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/sections.css">
+        <link rel="stylesheet" href="css/modal.css">
+        <link rel="stylesheet" href="css/newWordsList.css">
+        <link rel="stylesheet" href="css/commentModel.css">
+        <link rel="stylesheet" href="css/modalNewWordList.css">
+
+        <!-- Scrollbar Custom CSS
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"> -->
+        
+        <!-- fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+
+        <!-- scroll to top button style -->
+        <style>
+            .back-to-top{
+                background: none;
+                margin: 0;
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                width: 70px;
+                height: 70px;
+                z-index: 100;
+                display: none;
+                text-decoration: none;
+                color: #fc7700;
+                background-color: transparent;
+            }
+            .back-to-top i {
+                font-size: 60px;
+            }
+        </style>
+   
+
+    </head>
+    <body>
+        <nav id="topnav" class="navbar navbar-trans">
+            <div class="container-fluid">
+                <a href="#homeSection"><img src="images/Logo.png" alt=""></a>
+                <div class="topnav-right"> 
+                    <a href="#socialMedia"><i class="fab fa-twitter"></i></a>
+                    <a id="leftPadding" href="#socialMedia"><i class="fab fa-facebook-f line"></i></a>         
+                    <!-- Burger button -->
+                    <a id="sidebarCollapse" href="#"><i class="fas fa-align-justify"></i></a>
+                </div>
+            </div>        
+        </nav>
+    <!-- homeSection -->
+    <div id="homeSection">
+
+        <div class="container">
+            <div id="row" class="row">
+                <!-- Sidebar Holder -->
+                <nav id="sidebar">
+                    <div class="sidebar-header">
+                        <a href="#" id="sidebarClose">CLOSE <i class="fas fa-times"></i></a>
+                    </div>
+                    <!-- navigation elements -->
+                    <ul class="list-group list-unstyled components">
+                        <li class="list-group-item nav-item">
+                            <a href="#" id="sidebarClose" data-toggle="modal" data-target="#modalContactform">Contact Find New Words</a> 
+                        </li>
+                        <li class="list-group-item nav-item">
+                            <a href="#" id="sidebarClose" data-toggle="modal" data-target="#modalAddNewWordform">Add a New Word</a>
+                        </li>
+                        <!-- disabled -->
+                        <li class="list-group-item nav-item ">
+                            <a id="sidebarClose" data-toggle="collapse" href="#" data-target="#modalList" aria-expanded="false" aria-controls="modalList">New Words List</a>
+                        </li>
+                        <li class="list-group-item nav-item">
+                            <a id="sidebarClose" href="#" data-toggle="modal" data-target="#modalTerms">Terms & Conditions</a>
+                        </li>
+                        <li class="list-group-item nav-item">
+                            <a id="sidebarClose" href="#" data-toggle="modal" data-target="#modalPolicy">Privacy Policy</a>
+                        </li>
+                         <!--social media  -->
+                        <li class="list-group-item nav-item">
+                            <a id="sidebarClose" href="#socialMedia"><i class="fab fa-twitter"></i></a>
+                            <a id="sidebarClose" id="leftPadding" href="#socialMedia"><i class="fab fa-facebook-f line"></i></a>    
+                        </li>
+                        <!-- <li class="list-group-item nav-item">
+                            <a id="leftPadding" href="#facebookSection"><i class="fab fa-facebook-f line"></i></a> 
+                        </li> -->
+                     </ul>
+                </nav>
+                
+                <!-- copy -->
+                <div id="dv-2" class="col-sm-12 ">
+
+                    <div class="row">
+                        <!-- graphic -->
+                        <div id="dv-1" class="col-2 col-sm-2 offset-sm-1">
+                            <img src="images/FNW_Gradient-Colon.png" alt="">
+                        </div>
+                        <!-- Text copy -->
+                        <div id="dv-3" class="col-8 col-sm-8">
+                            <h1>
+                                Change, one  <br>
+                                word at a time.
+                            </h1>
+            
+                            <p>{website coming soon}</p>
+                            <br>
+                            <p>Welcome back to Finding New Words. Since last you where here, there has been '18 new words' that have been added to the list...
+                            </p>
+                            <!-- view list button -->
+                            <button id="btnViewList" href="#" type="button" class="btn btn-warning text-light" data-toggle="modal" data-target="#modalAddNewWordform">Check it out</button>
+                            <!-- add button -->
+                            <button id="btnAddNewWord" href="#" type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalAddNewWordform">Add A New Word</button>
+                            
+                        </div>
+                    </div>
+                   
+
+                </div>
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- copyright -->
+        <div class="container-fluid fixed-bottom">
+            <!-- Terms & condition section -->
+            <div class="home-content-copywrite col text-right">
+                <!-- fixed-bottom -->
+                <a href="#Terms" data-toggle="modal" data-target="#modalTerms" class="float-right">
+                    <span>Terms & Conditions</span>
+                </a>
+                <a href="#Policy" data-toggle="modal" data-target="#modalPolicy" class="float-right">
+                    <span>Privacy Policy</span>
+                </a>
+            </div>
+        </div>
+
+    </div>   
+    <!-- end of home section -->
+
+    <!-- social Media section -->
+    <div class="container" id="socialMedia">
+
+        <div class="row">
+            <!-- twitter -->
+            <div class="col-sm-12 col-md-6" >
+                <h2 style="color: white;">Twitter</h2>
+                <div style="max-height:500px; overflow: scroll;">
+                    <a class="twitter-timeline" href="https://twitter.com/FindNewWords?ref_src=twsrc%5Etfw">Tweets by FindNewWords</a> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                    
+            </div>
+            <!-- facebook -->
+            <div class="col-sm-12 col-md-6">
+                    <!-- <iframe class="embed-responsive-item" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FFindNewWordsSouthAfrica%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" min-width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe> -->
+                <h2 style="color: white;">Facebook</h2>
+                <iframe class="embed-responsive-item" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FFindNewWordsSouthAfrica%2F&tabs=timeline&max-width=440&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" min-width="340" height="500"  scrolling="yes" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
+
+        </div>
+    </div>
+     
+                <!-- <div class="col" style="height: 300px; background-color: rgb(255, 208, 0);">
+                <h2>facebook</h2> -->
+
+
+    <!-- footer -->
+    <footer id="footer">
+        <div>
+            <p>Copyright &copy; 2018 - <a href="#">Find New Words</a> | All rights Reserved</p>
+        </div>
+    </footer>
+
+
+
+
+    
+
+    <!-- scroll to top -->
+    <a href="#" class="back-to-top" style="display:inline;">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <!-- back to the top errow -->
+        <script>
+                $(document).ready(function () {
+                    console.log('Document Ready()');
+                    var offset = 250;
+                    var duration = 300;
+                    $(window).scroll(function () {
+                        if ($(this).scrollTop() > offset) {
+                            $('.back-to-top').fadeIn(duration);
+                        } else {
+                            $('.back-to-top').fadeOut(duration);
+                        }
+                    });
+                    $('.back-to-top').click(function (event) {
+                        event.preventDefault();
+                        $('html, body').animate({ scrollTop: 0 }, duration);
+                        return false;
+                    })
+                });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+          <!-- Smooth Scroll -->
+        <script src="js/smooth-scroll.js"></script>
+        <script src="js/modalListWord.js"></script>
+        <!-- form -->
+        <!-- <script src="js/contactForm.js"></script> -->
+        <!-- <script src="js/navbar.js"></script> -->
+
+        <!-- sidebar -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                    // $('.collapse.in').toggleClass('in');
+                    // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+
+                $('#sidebarClose').on('click', function(){
+                    $('#sidebar').toggleClass('active');
+                });
+
+                $('.nav-item').on('click', function(){
+                    $('#sidebar').removeClass('active');
+                    $(window).find('#sidebar').removeClass('active');
+                    
+                });
+
+            });
+        </script>
+        <!-- smooth scrol traget -->
+        <script>
+            var scroll = new SmoothScroll('a[href*="#"]');
+        </script>
+         
+
+    </body>
+</html>

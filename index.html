@@ -123,7 +123,7 @@
                                 what's happening so far, please visit our social media pages.
                             </p>
                             <!-- button -->
-                            <button href="#" type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalContactform">Add A New Word</button>
+                            <button href="#" type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalAddNewWordform">Add A New Word</button>
                             
                         </div>
                     </div>
@@ -206,7 +206,7 @@
                                             </p>
                                     </div>
                             
-                                    <form class="" action="" method="POST" id="contact_form">
+                                    <form id="contact_form">
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <input type="text" id="name" name="name" class="form-control" required>
@@ -226,11 +226,11 @@
                             
                                         <div class="form-row">
                                             <div class="form-group col-md-12">
-                                                <input type="text" id="subject" name="subject" class="form-control">
+                                                <input type="text" id="subject" name="subject" class="form-control" required>
                                                 <label for="subject" class="form-control-label">Subject</label>
                                             </div>
                                             <div class="form-group col-md-12">
-                                                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" required></textarea>
                                                 <label for="message" class="form-control-label">Your message</label>
                                             </div>
                                         </div>
@@ -284,22 +284,22 @@
                                         </p>
                                     </div>
                             
-                                    <form>
+                                    <form id="addNewWord">
                                         <div class="form-row">
                                             <div class="form-group col-sm-10 col-md-6">
                                                 <!-- <label for="inputEmail"></label> -->
-                                                <input type="text" id="inputEmail" class="form-control form-control-sm" placeholder="email">
+                                                <input type="email" id="inputEmail" class="form-control form-control-sm" placeholder="email" required>
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <!-- <label for="inputCommunity"></label> -->
-                                                <input type="text" id="inputCommunity" class="form-control form-control-sm" placeholder="Are you part of the lgbtq+ community?">
+                                                <input type="text" id="inputCommunity" class="form-control form-control-sm" placeholder="Are you part of the lgbtq+ community?" required>
                                             </div>
                                         </div>
                             
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <!-- <label for="newWord"></label> -->
-                                                <input type="text" id="newWord" class="form-control form-control-sm" placeholder="your word*">
+                                                <input type="text" id="newWord" class="form-control form-control-sm" placeholder="your word*" required>
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <!-- <label for="inputlang">what language is this?</label> -->
@@ -320,15 +320,15 @@
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="inputDefinition"></label>
-                                                <input type="text" id="inputDefinition" class="form-control form-control-sm" placeholder="What is the definition of this word*">
+                                                <input type="text" id="inputDefinition" class="form-control form-control-sm" placeholder="What is the definition of this word*" required>
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="inputMeaning"></label>
-                                                <input type="text" id="inputMeaning" class="form-control form-control-sm" placeholder="what does this word mean to you?">
+                                                <input type="text" id="inputMeaning" class="form-control form-control-sm" placeholder="what does this word mean to you?" required>
                                             </div>
                                         </div>
                             
-                                        <button type="submit" class="btn btn-danger">Submit</button>
+                                        <button type="submit" class="btn btn-danger" id="btnSubmit">Submit</button>
                                     </form>
                             
                                 </div>
@@ -391,8 +391,8 @@
                                                         <div class="card">
                                                             <div class="card-header">
                                                                 <div class="col-sm-12 col-md-8  float-left newWord">
-                                                                    <a id="word" href="#">Gqabothando</a>
-                                                                    <p>A leaf of love</p>
+                                                                    <a id="word" href="#">Gqabothando <small> <abbr title="isiXhosa" class="initialism">{xh}</abbr></small></a><br>
+                                                                    <p id="wordMeaning">A leaf of love</p>
                                                                 </div>
                                                                 
                                                                 <div class="col-sm-12 col-md-4 media float-left vote">
@@ -1586,7 +1586,7 @@
 
             </div>
             <!-- comments modal -->
-            <div class="modal-dialog modal-lg comments">
+            <div class="modal2 modal-dialog modal-lg comments">
                     <div class="modal-content">
                 
                       <!-- Modal Header -->
@@ -1669,14 +1669,9 @@
         </div>
         <!-- End of Modal Wrap -->
 
-        <!-- *********************************** -->
-        
-        <!-- Comments Modal -->
-        <!-- The Modal -->
-      <!-- <div class="modal modal-dialog" id="commentsModal"; style="overflow-y: scroll; max-height:85%; margin-top: 50px; margin-bottom:50px;"> -->
-
 
     </div> <!-- end of container - 2 modals inside -->
+
 
         <!-- *******************Privacy Policy******************* -->
 
@@ -1734,11 +1729,11 @@
     
             </div>
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
     Launch demo modal
   </button>
   
-  <!-- Modal -->
+  
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -1757,7 +1752,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
 
@@ -1798,6 +1793,8 @@
           <!-- Smooth Scroll -->
         <script src="js/smooth-scroll.js"></script>
         <script src="js/modalListWord.js"></script>
+        <!-- form -->
+        <!-- <script src="js/contactForm.js"></script> -->
         <!-- <script src="js/navbar.js"></script> -->
 
         <!-- sidebar -->
@@ -1810,9 +1807,9 @@
                     // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
                 });
 
-                // $('#sidebarClose').on('click', function(){
-                //     $('#sidebar').toggleClass('active');
-                // });
+                $('#sidebarClose').on('click', function(){
+                    $('#sidebar').toggleClass('active');
+                });
 
                 $('.nav-item').on('click', function(){
                     $('#sidebar').removeClass('active');

@@ -32,6 +32,11 @@ body {
     line-height: 1.7em;
 }
 
+/* view list button */
+#btnViewList {
+    margin-right: 5px;
+}
+
 
 a, a:hover, a:focus {
     color: inherit;
