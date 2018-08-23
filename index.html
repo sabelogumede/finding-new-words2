@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>Finding New Words</title>
+        <!-- favicon -->
+        <link rel="shortcut icon" href="images/favicon-16x16.png">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/sections.css">
+        <link rel="stylesheet" href="css/modal.css">
+        <link rel="stylesheet" href="css/newWordsList.css">
+        <link rel="stylesheet" href="css/commentModel.css">
+        <link rel="stylesheet" href="css/modalNewWordList.css">
+
+        <!-- Scrollbar Custom CSS
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"> -->
+        
+        <!-- fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+
+        <!-- scroll to top button style -->
+        <style>
+            .back-to-top{
+                background: none;
+                margin: 0;
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                width: 70px;
+                height: 70px;
+                z-index: 100;
+                display: none;
+                text-decoration: none;
+                color: #fc7700;
+                background-color: transparent;
+            }
+            .back-to-top i {
+                font-size: 60px;
+            }
+        </style>
+   
+
+    </head>
+    <body>
+        <nav id="topnav" class="navbar navbar-trans">
+            <div class="container-fluid">
+                <a href="#homeSection"><img src="images/Logo.png" alt=""></a>
+                <div class="topnav-right"> 
+                    <a href="#socialMedia"><i class="fab fa-twitter"></i></a>
+                    <a id="leftPadding" href="#socialMedia"><i class="fab fa-facebook-f line"></i></a>         
+                    <!-- Burger button -->
+                    <a id="sidebarCollapse" href="#"><i class="fas fa-align-justify"></i></a>
+                </div>
+            </div>        
+        </nav>
+    <!-- homeSection -->
+    <div id="homeSection">
+
+        <div class="container">
+            <div id="row" class="row">
+                <!-- Sidebar Holder -->
+                <nav id="sidebar">
+                    <div class="sidebar-header">
+                        <a href="#" id="sidebarClose">CLOSE <i class="fas fa-times"></i></a>
+                    </div>
+                    <!-- navigation elements -->
+                    <ul class="list-group list-unstyled components">
+                        <li class="list-group-item nav-item">
+                            <a href="#" id="sidebarClose" data-toggle="modal" data-target="#modalContactform">Contact Find New Words</a> 
+                        </li>
+                        <li class="list-group-item nav-item">
+                            <a href="#" id="sidebarClose" data-toggle="modal" data-target="#modalAddNewWordform">Add a New Word</a>
+                        </li>
+                        <!-- disabled -->
+                        <li class="list-group-item nav-item ">
+                            <a id="sidebarClose" data-toggle="collapse" href="#" data-target="#modalList" aria-expanded="false" aria-controls="modalList">New Words List</a>
+                        </li>
+                        <li class="list-group-item nav-item">
+                            <a id="sidebarClose" href="#" data-toggle="modal" data-target="#modalTerms">Terms & Conditions</a>
+                        </li>
+                        <li class="list-group-item nav-item">
+                            <a id="sidebarClose" href="#" data-toggle="modal" data-target="#modalPolicy">Privacy Policy</a>
+                        </li>
+                         <!--social media  -->
+                        <li class="list-group-item nav-item">
+                            <a id="sidebarClose" href="#socialMedia"><i class="fab fa-twitter"></i></a>
+                            <a id="sidebarClose" id="leftPadding" href="#socialMedia"><i class="fab fa-facebook-f line"></i></a>    
+                        </li>
+                        <!-- <li class="list-group-item nav-item">
+                            <a id="leftPadding" href="#facebookSection"><i class="fab fa-facebook-f line"></i></a> 
+                        </li> -->
+                     </ul>
+                </nav>
+                
+                <!-- copy -->
+                <div id="dv-2" class="col-sm-12 ">
+
+                    <div class="row">
+                        <!-- graphic -->
+                        <div id="dv-1" class="col-2 col-sm-2 offset-sm-1">
+                            <img src="images/FNW_Gradient-Colon.png" alt="">
+                        </div>
+                        <!-- Text copy -->
+                        <div id="dv-3" class="col-8 col-sm-8">
+                            <h1>
+                                Change, one  <br>
+                                word at a time.
+                            </h1>
+            
+                            <p>{website coming soon}</p>
+                            <br>
+                            <p>Thank you for visiting Find New Words.
+                                Our website is currently under construction.
+                                For more information on the project, our workshops and 
+                                what's happening so far, please visit our social media pages.
+                            </p>
+                            <!-- button -->
+                            <button href="#" type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalContactform">Add A New Word</button>
+                            
+                        </div>
+                    </div>
+                   
+
+                </div>
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- copyright -->
+        <div class="container-fluid">
+            <!-- Terms & condition section -->
+            <div class="home-content-copywrite col text-right">
+                <a href="#Terms" data-toggle="modal" data-target="#modalTerms" class="float-right">
+                    <span>Terms & Conditions</span>
+                </a>
+                <a href="#Policy" data-toggle="modal" data-target="#modalPolicy" class="float-right">
+                    <span>Privacy Policy</span>
+                </a>
+            </div>
+        </div>
+
+    </div>   
+    <!-- end of home section -->
+
+    <!-- social Media section -->
+    <div class="container" id="socialMedia">
+
+        <div class="row">
+            <!-- twitter -->
+            <div class="col-sm-12 col-md-6" >
+                <h2 style="color: white;">Twitter</h2>
+                <div style="max-height:500px; overflow: scroll;">
+                    <a class="twitter-timeline" href="https://twitter.com/FindNewWords?ref_src=twsrc%5Etfw">Tweets by FindNewWords</a> 
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                    
+            </div>
+            <!-- facebook -->
+            <div class="col-sm-12 col-md-6">
+                    <!-- <iframe class="embed-responsive-item" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FFindNewWordsSouthAfrica%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" min-width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe> -->
+                <h2 style="color: white;">Facebook</h2>
+                <iframe class="embed-responsive-item" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FFindNewWordsSouthAfrica%2F&tabs=timeline&max-width=440&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" min-width="340" height="500"  scrolling="yes" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            </div>
+
+        </div>
+    </div>
+     
+                <!-- <div class="col" style="height: 300px; background-color: rgb(255, 208, 0);">
+                <h2>facebook</h2> -->
+
+
+    <!-- footer -->
+    <footer id="footer">
+        <div>
+            <p>Copyright &copy; 2018 - <a href="#">Find New Words</a> | All rights Reserved</p>
+        </div>
+    </footer>
+
+<!-- ****************************Modals************************************ -->
+
+    <!-- Contact New Words Modal -->
+    <div class="modal fade" id="modalContactform" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h5 class="modal-title" id="myModal">Contact Find New Words</h5>
+                        <button>
+                            <span aria-hidden="true" data-dismiss="modal">&times;</span>
+                        </button>
+                    </div>
+                    <!-- modal body -->
+                    <div class="modal-body">
+                        <!-- form container -->
+                            <div class="container">
+                                    <div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Donec dictum placerat mi eget ornare. Quisque nunc urna,
+                                            volutpat id feugiat sit amet, varius sit amet massa.
+                                            </p>
+                                    </div>
+                            
+                                    <form class="" action="" method="POST" id="contact_form">
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <input type="text" id="name" name="name" class="form-control" required>
+                                                <label for="name" class="form-control-label">Your name</label>
+                                                <!-- validation messages -->
+                                                <div class="valid-feedback">Success! You've done it.</div>
+                                                <div class="invalid-feedback">Success! You've done it.</div>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <input type="email" id="email" name="email" class="form-control" required>
+                                                <label for="email" class="form-control-label">Your email</label>
+                                                <!-- validation messages -->
+                                                <div class="valid-feedback">Success! You've done it.</div>
+                                                <div class="invalid-feedback">Success! You've done it.</div>
+                                            </div>
+                                        </div>
+                            
+                                        <div class="form-row">
+                                            <div class="form-group col-md-12">
+                                                <input type="text" id="subject" name="subject" class="form-control">
+                                                <label for="subject" class="form-control-label">Subject</label>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                                <label for="message" class="form-control-label">Your message</label>
+                                            </div>
+                                        </div>
+                            
+                                        <button type="submit" class="btn btn-danger" id="btnSubmit">Submit</button>
+                                    </form>
+
+                                        <!--Grid column-->
+                                        <div class="col-md-6 subscribe">
+                                            <h5 class="h5-responsive font-weight-bold">Get involved</h5>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" name="updates" id="updates" value="1">
+                                                <label for="updates" class="form-check-label">Subscribe to our newsletter</label>
+                                            </div>
+                                        </div>
+                                            <!--Grid column-->
+                            
+                                </div>
+
+                                <!-- form container -->
+
+                    </div>
+                    <!-- end of modal footer -->
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save Changes</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- ********************************************************* -->
+        <!-- Add New word Modal -->
+        <div class="modal fade" id="modalAddNewWordform" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h5 id="myModal">Add A New Word</h5>
+                        <button>
+                            <span aria-hidden="true" data-dismiss="modal">&times;</span>
+                        </button>
+                    </div>
+                    <!-- modal body -->
+                    <div class="modal-body">
+                        <!-- form container -->
+                            <div class="container">
+                                    <div>
+                                        <!-- <h1>Add a New Word</h1> -->
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                            Donec dictum placerat mi eget ornare. Quisque nunc urna,
+                                            volutpat id feugiat sit amet, varius sit amet massa.
+                                        </p>
+                                    </div>
+                            
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-10 col-md-6">
+                                                <!-- <label for="inputEmail"></label> -->
+                                                <input type="text" id="inputEmail" class="form-control form-control-sm" placeholder="email">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <!-- <label for="inputCommunity"></label> -->
+                                                <input type="text" id="inputCommunity" class="form-control form-control-sm" placeholder="Are you part of the lgbtq+ community?">
+                                            </div>
+                                        </div>
+                            
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <!-- <label for="newWord"></label> -->
+                                                <input type="text" id="newWord" class="form-control form-control-sm" placeholder="your word*">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <!-- <label for="inputlang">what language is this?</label> -->
+                                                <select id="inputlang" class="form-control form-control-sm">
+                                                    <option value="#">what language is this...?</option>
+                                                    <option value="#">English</option>
+                                                    <option value="#">IsiZulu</option>
+                                                    <option value="#">Afrikaans</option>
+                                                    <option value="#">Sipedi</option>
+                                                    <option value="#">SeSotho</option>
+                                                    <option value="#">Siswati</option>
+                                                    <option value="#">Setswana</option>
+                                                    <option value="#">Setswana</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                            
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="inputDefinition"></label>
+                                                <input type="text" id="inputDefinition" class="form-control form-control-sm" placeholder="What is the definition of this word*">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="inputMeaning"></label>
+                                                <input type="text" id="inputMeaning" class="form-control form-control-sm" placeholder="what does this word mean to you?">
+                                            </div>
+                                        </div>
+                            
+                                        <button type="submit" class="btn btn-danger">Submit</button>
+                                    </form>
+                            
+                                </div>
+
+
+                                <!-- form container -->
+
+
+                    </div>
+                    <!-- end of modal footer -->
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save Changes</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- ******************************************************* -->
+<div class="container">
+
+    <div class="modal fade" id="modalList" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+
+            <!-- New Word List Modal -->
+            <div class="modal-dialog modal-lg modalNewWordList" id="modalNewWordList" role="document">
+                
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h5 class="modal-title" id="myModal">New Word List</h5>
+                        <button>
+                            <span id="modalList" aria-hidden="true" data-dismiss="modal">&times;</span>
+                            <!-- <span aria-hidden="true" data-dismiss="modal">&times;</span> -->
+                        </button>
+                    </div>
+                    <!-- modal body -->
+                    <div class="modal-body">
+
+                            <div class="container">
+
+                                    <div id="accordion" class="col">
+                                        <!-- Level one - cleate a card for each "Original word" -->
+                                        <div class="card">
+                            
+                                            <div class="card-header originalWord" id="headingOne">
+                                                <div  class="mb-0 float-left col-sm-6 col-md-8">
+                                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                        <h3 class="float-left">Lesbian</h3> <br>
+                                                     </button>
+                                                     
+                                                </div>
+                                                <div class="media float-left col-sm-6 col-md-4">
+                                                    <div class="media-body">
+                                                        <p>2 words / 8 comments</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- level Two - create a {nested-card-} for the new "word" related to the "Original word"-->
+                                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                                <!-- nested child div -->
+                                                <div class="card-body" id="child2">
+                                                        <div class="card">
+                                                            <div class="card-header">
+                                                                <div class="col-sm-12 col-md-8  float-left newWord">
+                                                                    <a id="word" href="#">Gqabothando</a>
+                                                                    <p>A leaf of love</p>
+                                                                </div>
+                                                                
+                                                                <div class="col-sm-12 col-md-4 media float-left vote">
+                                                                    <div class="media-body" data-parent="#child2">
+                                                                         <!--Review-->
+                                                                        <i class="far fa-laugh blue-text"> </i>
+                                                                        <i class="far fa-smile blue-text"> </i>
+                                                                        <i class="far fa-meh blue-text"> </i>
+                                                                        <i class="far fa-frown blue-text"> </i>
+                                                                        <i class="far fa-angry gray-text"> </i>
+                                                                        <!-- <p>Vote for this word</p> -->
+                                                                        <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- nested child div-->
+                                                    <div class="card-body" id="child2">
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <div class="col-sm-12 col-md-8  float-left newWord">
+                                                                        <a id="word" href="#">Insikamusa</a>
+                                                                        <p>Kind-natured woman</p>
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-sm-12 col-md-4 media float-left vote">
+                                                                        <div class="media-body" data-parent="#child2">
+                                                                             <!--Review-->
+                                                                             <i class="far fa-laugh blue-text"> </i>
+                                                                             <i class="far fa-smile blue-text"> </i>
+                                                                             <i class="far fa-meh blue-text"> </i>
+                                                                             <i class="far fa-frown blue-text"> </i>
+                                                                             <i class="far fa-angry gray-text"> </i>
+                                                                             <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- nested child div -->
+                                                        <div class="card-body" id="child2">
+                                                                <div class="card">
+                                                                    <div class="card-header">
+                                                                        <div class="col-sm-12 col-md-8  float-left newWord">
+                                                                            <a id="word" href="#">isiMang'omhlaba</a>
+                                                                        
+                                                                            <p>A world wonder</p>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-sm-12 col-md-4 media float-left vote">
+                                                                            <div class="media-body" data-parent="#child2">
+                                                                                 <!--Review-->
+                                                                                 <i class="far fa-laugh blue-text"> </i>
+                                                                                 <i class="far fa-smile blue-text"> </i>
+                                                                                 <i class="far fa-meh blue-text"> </i>
+                                                                                 <i class="far fa-frown blue-text"> </i>
+                                                                                 <i class="far fa-angry gray-text"> </i>
+                                                                                 <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- nested child div -->
+                                                <div class="card-body" id="child1">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <div class="col-sm-12  float-left newWord">
+                                                                <a id="word" href="#">isiSindo Sothando</a>
+                                                                <p>The weight of love</p>
+                                                            </div>
+                                                            
+                                                            <div class="col-sm-12 media float-left vote">
+                                                                <div class="media-body">
+                                                                     <!--Review-->
+                                                                      <i class="far fa-laugh blue-text"> </i>
+                                                                      <i class="far fa-smile blue-text"> </i>
+                                                                      <i class="far fa-meh blue-text"> </i>
+                                                                      <i class="far fa-frown blue-text"> </i>
+                                                                      <i class="far fa-angry gray-text"> </i>
+                                                                      <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end of word 1 -->
+                                                <div class="card-body" id="child1">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <div class="col-sm-12  float-left newWord">
+                                                                <a id="word" href="#">isiThixokazi</a>
+                                                                <p>A goddess</p>
+                                                            </div>
+                                                                
+                                                            <div class="col-sm-12 media float-left vote">
+                                                                <div class="media-body">
+                                                                    <!--Review-->
+                                                                    <i class="far fa-laugh blue-text"> </i>
+                                                                    <i class="far fa-smile blue-text"> </i>
+                                                                    <i class="far fa-meh blue-text"> </i>
+                                                                    <i class="far fa-frown blue-text"> </i>
+                                                                    <i class="far fa-angry gray-text"> </i>
+                                                                    <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                        
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- nested child div -->
+                                                <div class="card-body" id="child1">
+                                                        <div class="card">
+                                                            <div class="card-header">
+                                                                <div class="col-sm-12  float-left newWord">
+                                                                    <a id="word" href="#">Monolohadi</a>
+                                                                    <p>The gentle woman</p>
+                                                                </div>
+                                                                    
+                                                                <div class="col-sm-12 media float-left vote">
+                                                                    <div class="media-body">
+                                                                        <!--Review-->
+                                                                        <i class="far fa-laugh blue-text"> </i>
+                                                                        <i class="far fa-smile blue-text"> </i>
+                                                                        <i class="far fa-meh blue-text"> </i>
+                                                                        <i class="far fa-frown blue-text"> </i>
+                                                                        <i class="far fa-angry gray-text"> </i>
+                                                                        <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                            
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- nested child div -->
+                                                    <div class="card-body" id="child1">
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <div class="col-sm-12  float-left newWord">
+                                                                        <a id="word" href="#">Qhawekhazi</a>
+                                                                        <p>Heroine</p>
+                                                                    </div>
+                                                                        
+                                                                    <div class="col-sm-12 media float-left vote">
+                                                                        <div class="media-body">
+                                                                            <!--Review-->
+                                                                            <i class="far fa-laugh blue-text"> </i>
+                                                                            <i class="far fa-smile blue-text"> </i>
+                                                                            <i class="far fa-meh blue-text"> </i>
+                                                                            <i class="far fa-frown blue-text"> </i>
+                                                                            <i class="far fa-angry gray-text"> </i>
+                                                                            <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                            </div>
+                                            <!-- end of Original word-1 collaps -->
+                                        </div>
+                                        <!-- end of Card -->
+                                        <div class="card">
+                            
+                                                <div class="card-header originalWord" id="headingTwo">
+                                                    <div  class="mb-0 float-left col-sm-12 col-md-8">
+                                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseOne">
+                                                            <h3 class="float-left">Gay</h3> <br>
+                                                         </button>
+                                                         
+                                                    </div>
+                                                    <div class="media float-left col-sm-12 col-md-4">
+                                                        <div class="media-body">
+                                                            <p>2 words / 8 comments</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- level Two - create a {nested-card-} for the new "word" related to the "Original word"-->
+                                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                                    <!-- nested child div -->
+                                                    <div class="card-body" id="child1">
+                                                        <div class="card">
+                                                            <div class="card-header">
+                                                                <div class="col-sm-12  float-left newWord">
+                                                                    <a id="word" href="#">Qhawekhazi</a>
+                                                                    <p>Heroine</p>
+                                                                </div>
+                                                                
+                                                                <div class="col-sm-12 media float-left vote">
+                                                                    <div class="media-body">
+                                                                         <!--Review-->
+                                                                         <i class="far fa-laugh blue-text"> </i>
+                                                                         <i class="far fa-smile blue-text"> </i>
+                                                                         <i class="far fa-meh blue-text"> </i>
+                                                                         <i class="far fa-frown blue-text"> </i>
+                                                                         <i class="far fa-angry gray-text"> </i>
+                                                                         <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end of word 1 -->
+                                                    <div class="card-body" id="child1">
+                                                        <div class="card">
+                                                            <div class="card-header">
+                                                                <div class="col-sm-12  float-left newWord">
+                                                                    <a href="#" data-toggle="collapse" data-target="#collapseOneA">Fie-Fie</a>
+                                                                    <p>An emerging/baby queer</p>
+                                                                </div>
+                                                                    
+                                                                <div class="col-sm-12 media float-left vote">
+                                                                    <div class="media-body">
+                                                                        <!--Review-->
+                                                                        <i class="far fa-laugh blue-text"> </i>
+                                                                        <i class="far fa-smile blue-text"> </i>
+                                                                        <i class="far fa-meh blue-text"> </i>
+                                                                        <i class="far fa-frown blue-text"> </i>
+                                                                        <i class="far fa-angry gray-text"> </i>
+                                                                        <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                            
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- nested child div/card -->
+                                                    <div class="card-body" id="child1">
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <div class="col-sm-12  float-left newWord">
+                                                                        <a href="#" data-toggle="collapse" data-target="#collapseOneA">Gabane</a>
+                                                                        <p>Strong, powerful, strong-willed, resillent, bold</p>
+                                                                    </div>
+                                                                        
+                                                                    <div class="col-sm-12 media float-left vote">
+                                                                        <div class="media-body">
+                                                                            <!--Review-->
+                                                                            <i class="far fa-laugh blue-text"> </i>
+                                                                            <i class="far fa-smile blue-text"> </i>
+                                                                            <i class="far fa-meh blue-text"> </i>
+                                                                            <i class="far fa-frown blue-text"> </i>
+                                                                            <i class="far fa-angry gray-text"> </i>
+                                                                            <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- nested card div -->
+                                                        <div class="card-body" id="child1">
+                                                                <div class="card">
+                                                                    <div class="card-header">
+                                                                        <div class="col-sm-12  float-left newWord">
+                                                                            <a href="#" data-toggle="collapse" data-target="#collapseOneA">isiBindile</a>
+                                                                            <p>The Brave, courageous, audacious one</p>
+                                                                        </div>
+                                                                            
+                                                                        <div class="col-sm-12 media float-left vote">
+                                                                            <div class="media-body">
+                                                                                <!--Review-->
+                                                                                <i class="far fa-laugh blue-text"> </i>
+                                                                                <i class="far fa-smile blue-text"> </i>
+                                                                                <i class="far fa-meh blue-text"> </i>
+                                                                                <i class="far fa-frown blue-text"> </i>
+                                                                                <i class="far fa-angry gray-text"> </i>
+                                                                                <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                    
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- nested card div -->
+                                                        <div class="card-body" id="child1">
+                                                                <div class="card">
+                                                                    <div class="card-header">
+                                                                        <div class="col-sm-12  float-left newWord">
+                                                                            <a href="#" data-toggle="collapse" data-target="#collapseOneA">Serurubele</a>
+                                                                            <p>Femme, soft, transformative, fluid, inclusive</p>
+                                                                        </div>
+                                                                            
+                                                                        <div class="col-sm-12 media float-left vote">
+                                                                            <div class="media-body">
+                                                                                <!--Review-->
+                                                                                <i class="far fa-laugh blue-text"> </i>
+                                                                                <i class="far fa-smile blue-text"> </i>
+                                                                                <i class="far fa-meh blue-text"> </i>
+                                                                                <i class="far fa-frown blue-text"> </i>
+                                                                                <i class="far fa-angry gray-text"> </i>
+                                                                                <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                    
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                </div>
+                                                <!-- end of Original word-1 collaps -->
+                                            </div>
+                                            <!-- end of Card -->
+                                            <div class="card">
+                            
+                                                    <div class="card-header originalWord" id="headingThree">
+                                                        <div  class="mb-0 float-left col-sm-12 col-md-8">
+                                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseOne">
+                                                                    <h3 class="float-left">Bisexual</h3> <br>
+                                                             </button>
+                                                             
+                                                        </div>
+                                                        <div class="media float-left col-sm-12 col-md-4">
+                                                            <div class="media-body">
+                                                                <p>2 words / 8 comments</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- level Two - create a {nested-card-} for the new "word" related to the "Original word"-->
+                                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                                        <!-- nested child div -->
+                                                        <div class="card-body" id="child1">
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <div class="col-sm-12  float-left newWord">
+                                                                        <a id="word" href="#">Alunamda Uthando</a>
+                                                                        <p>Love has no borders</p>
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-sm-12 media float-left vote">
+                                                                        <div class="media-body">
+                                                                             <!--Review-->
+                                                                             <i class="far fa-laugh blue-text"> </i>
+                                                                             <i class="far fa-smile blue-text"> </i>
+                                                                             <i class="far fa-meh blue-text"> </i>
+                                                                             <i class="far fa-frown blue-text"> </i>
+                                                                             <i class="far fa-angry gray-text"> </i>
+                                                                             <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- nested child div -->
+                                                        <div class="card-body" id="child1">
+                                                                <div class="card">
+                                                                    <div class="card-header">
+                                                                        <div class="col-sm-12  float-left newWord">
+                                                                            <a id="word" href="#">Dabel Adapta</a>
+                                                                            <p>Swinging both ways</p>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-sm-12 media float-left vote">
+                                                                            <div class="media-body">
+                                                                                 <!--Review-->
+                                                                                 <i class="far fa-laugh blue-text"> </i>
+                                                                                 <i class="far fa-smile blue-text"> </i>
+                                                                                 <i class="far fa-meh blue-text"> </i>
+                                                                                 <i class="far fa-frown blue-text"> </i>
+                                                                                 <i class="far fa-angry gray-text"> </i>
+                                                                                 <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- nested child div -->
+                                                        <div class="card-body" id="child1">
+                                                                <div class="card">
+                                                                    <div class="card-header">
+                                                                        <div class="col-sm-12  float-left newWord">
+                                                                            <a id="word" href="#">Mabrr</a>
+                                                                            <p>...</p>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-sm-12 media float-left vote">
+                                                                            <div class="media-body">
+                                                                                 <!--Review-->
+                                                                                 <i class="far fa-laugh blue-text"> </i>
+                                                                                 <i class="far fa-smile blue-text"> </i>
+                                                                                 <i class="far fa-meh blue-text"> </i>
+                                                                                 <i class="far fa-frown blue-text"> </i>
+                                                                                 <i class="far fa-angry gray-text"> </i>
+                                                                                 <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- nested child div -->
+                                                        <div class="card-body" id="child1">
+                                                                <div class="card">
+                                                                    <div class="card-header">
+                                                                        <div class="col-sm-12  float-left newWord">
+                                                                            <a id="word" href="#">Mokgethi</a>
+                                                                            <p>One who chooses</p>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-sm-12 media float-left vote">
+                                                                            <div class="media-body">
+                                                                                 <!--Review-->
+                                                                                 <i class="far fa-laugh blue-text"> </i>
+                                                                                 <i class="far fa-smile blue-text"> </i>
+                                                                                 <i class="far fa-meh blue-text"> </i>
+                                                                                 <i class="far fa-frown blue-text"> </i>
+                                                                                 <i class="far fa-angry gray-text"> </i>
+                                                                                 <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- nested child div -->
+                                                        <div class="card-body" id="child1">
+                                                                <div class="card">
+                                                                    <div class="card-header">
+                                                                        <div class="col-sm-12  float-left newWord">
+                                                                            <a id="word" href="#">Nommer Twee</a>
+                                                                            <p>A person of twos</p>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-sm-12 media float-left vote">
+                                                                            <div class="media-body">
+                                                                                 <!--Review-->
+                                                                                 <i class="far fa-laugh blue-text"> </i>
+                                                                                 <i class="far fa-smile blue-text"> </i>
+                                                                                 <i class="far fa-meh blue-text"> </i>
+                                                                                 <i class="far fa-frown blue-text"> </i>
+                                                                                 <i class="far fa-angry gray-text"> </i>
+                                                                                 <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- nested child div -->
+                                                        <div class="card-body" id="child1">
+                                                                <div class="card">
+                                                                    <div class="card-header">
+                                                                        <div class="col-sm-12 float-left newWord">
+                                                                            <a id="word" href="#">Pachase</a>
+                                                                            <p>An in between space</p>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-sm-12 media float-left vote">
+                                                                            <div class="media-body">
+                                                                                 <!--Review-->
+                                                                                 <i class="far fa-laugh blue-text"> </i>
+                                                                                 <i class="far fa-smile blue-text"> </i>
+                                                                                 <i class="far fa-meh blue-text"> </i>
+                                                                                 <i class="far fa-frown blue-text"> </i>
+                                                                                 <i class="far fa-angry gray-text"> </i>
+                                                                                 <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- nested child div -->
+                                                        <div class="card-body" id="child1">
+                                                                <div class="card">
+                                                                    <div class="card-header">
+                                                                        <div class="col-sm-12  float-left newWord">
+                                                                            <a id="word" href="#">Setlhare</a>
+                                                                            <p>A tree that branches out</p>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-sm-12 media float-left vote">
+                                                                            <div class="media-body">
+                                                                                 <!--Review-->
+                                                                                 <i class="far fa-laugh blue-text"> </i>
+                                                                                 <i class="far fa-smile blue-text"> </i>
+                                                                                 <i class="far fa-meh blue-text"> </i>
+                                                                                 <i class="far fa-frown blue-text"> </i>
+                                                                                 <i class="far fa-angry gray-text"> </i>
+                                                                                 <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- nested child div -->
+                                                        <div class="card-body" id="child1">
+                                                                <div class="card">
+                                                                    <div class="card-header">
+                                                                        <div class="col-sm-12 float-left newWord">
+                                                                            <a id="word" href="#">Mthosana</a>
+                                                                            <p>...</p>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-sm-12 media float-left vote">
+                                                                            <div class="media-body">
+                                                                                 <!--Review-->
+                                                                                 <i class="far fa-laugh blue-text"> </i>
+                                                                                 <i class="far fa-smile blue-text"> </i>
+                                                                                 <i class="far fa-meh blue-text"> </i>
+                                                                                 <i class="far fa-frown blue-text"> </i>
+                                                                                 <i class="far fa-angry gray-text"> </i>
+                                                                                 <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- nested child div -->
+                                                        <div class="card-body" id="child1">
+                                                                <div class="card">
+                                                                    <div class="card-header">
+                                                                        <div class="col-sm-12 float-left newWord">
+                                                                            <a id="word" href="#">Kabili</a>
+                                                                            <p>Twice</p>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-sm-12 media float-left vote">
+                                                                            <div class="media-body">
+                                                                                 <!--Review-->
+                                                                                 <i class="far fa-laugh blue-text"> </i>
+                                                                                 <i class="far fa-smile blue-text"> </i>
+                                                                                 <i class="far fa-meh blue-text"> </i>
+                                                                                 <i class="far fa-frown blue-text"> </i>
+                                                                                 <i class="far fa-angry gray-text"> </i>
+                                                                                 <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        <!-- end of word 1 -->
+                                                        <div class="card-body" id="child1">
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <div class="col-sm-12 float-left newWord">
+                                                                        <a href="#" data-toggle="collapse" data-target="#collapseOneA">Waleratopedi</a>
+                                                                        <p>A person of two loves</p>
+                                                                    </div>
+                                                                        
+                                                                    <div class="col-sm-12 media float-left vote">
+                                                                        <div class="media-body">
+                                                                            <!--Review-->
+                                                                            <i class="far fa-laugh blue-text"> </i>
+                                                                            <i class="far fa-smile blue-text"> </i>
+                                                                            <i class="far fa-meh blue-text"> </i>
+                                                                            <i class="far fa-frown blue-text"> </i>
+                                                                            <i class="far fa-angry gray-text"> </i>
+                                                                            <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end of Original word-1 collaps -->
+                                                </div>
+                                                <!-- end of Card -->
+                                                <div class="card">
+                            
+                                                        <div class="card-header originalWord" id="headingfour">
+                                                            <div  class="mb-0 float-left col-sm-12 col-md-8">
+                                                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapseOne">
+                                                                        <h3 class="float-left">Transgender</h3> <br>
+                                                                 </button>
+                                                                 
+                                                            </div>
+                                                            <div class="media float-left col-sm-12 col-md-4">
+                                                                <div class="media-body">
+                                                                    <p>2 words / 8 comments</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- level Two - create a {nested-card-} for the new "word" related to the "Original word"-->
+                                                        <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordion">
+                                                            <!-- nested child div -->
+                                                            <div class="card-body" id="child1">
+                                                                <div class="card">
+                                                                    <div class="card-header">
+                                                                        <div class="col-sm-12 float-left newWord">
+                                                                            <a id="word" href="#">Dlulabulili</a>
+                                                                            <p>One who transcends the gender they were born into</p>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-sm-12 media float-left vote">
+                                                                            <div class="media-body">
+                                                                                 <!--Review-->
+                                                                                 <i class="far fa-laugh blue-text"> </i>
+                                                                                 <i class="far fa-smile blue-text"> </i>
+                                                                                 <i class="far fa-meh blue-text"> </i>
+                                                                                 <i class="far fa-frown blue-text"> </i>
+                                                                                 <i class="far fa-angry gray-text"> </i>
+                                                                                 <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- end of word 1 -->
+                                                            <div class="card-body" id="child1">
+                                                                <div class="card">
+                                                                    <div class="card-header">
+                                                                        <div class="col-sm-12 float-left newWord">
+                                                                            <a href="#" data-toggle="collapse" data-target="#collapseOneA">Tshelabong</a>
+                                                                            <p>A person who is transitioning/crossing over</p>
+                                                                        </div>
+                                                                            
+                                                                        <div class="col-sm-12 media float-left vote">
+                                                                            <div class="media-body">
+                                                                                <!--Review-->
+                                                                                <i class="far fa-laugh blue-text"> </i>
+                                                                                <i class="far fa-smile blue-text"> </i>
+                                                                                <i class="far fa-meh blue-text"> </i>
+                                                                                <i class="far fa-frown blue-text"> </i>
+                                                                                <i class="far fa-angry gray-text"> </i>
+                                                                                <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                    
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end of Original word-1 collaps -->
+                                                    </div>
+                                                    <!-- end of Card -->
+                                                    <div class="card">
+                            
+                                                            <div class="card-header originalWord" id="headingFive">
+                                                                <div  class="mb-0 float-left col-sm-12 col-md-8">
+                                                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseOne">
+                                                                            <h3 class="float-left">Queer</h3> <br>
+                                                                     </button>
+                                                                     
+                                                                </div>
+                                                                <div class="media float-left col-sm-12 col-md-4">
+                                                                    <div class="media-body">
+                                                                        <p>2 words / 8 comments</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- level Two - create a {nested-card-} for the new "word" related to the "Original word"-->
+                                                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                                                                <!-- nested child div -->
+                                                                <div class="card-body" id="child1">
+                                                                    <div class="card">
+                                                                        <div class="card-header">
+                                                                            <div class="col-sm-12 float-left newWord">
+                                                                                <a id="word" href="#">Gqabothando</a>
+                                                                                <p>A leaf of love</p>
+                                                                            </div>
+                                                                            
+                                                                            <div class="col-sm-12 media float-left vote">
+                                                                                <div class="media-body">
+                                                                                     <!--Review-->
+                                                                                     <i class="far fa-laugh blue-text"> </i>
+                                                                                     <i class="far fa-smile blue-text"> </i>
+                                                                                     <i class="far fa-meh blue-text"> </i>
+                                                                                     <i class="far fa-frown blue-text"> </i>
+                                                                                     <i class="far fa-angry gray-text"> </i>
+                                                                                     <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end of word 1 -->
+                                                                <div class="card-body" id="child1">
+                                                                    <div class="card">
+                                                                        <div class="card-header">
+                                                                            <div class="col-sm-12 float-left newWord">
+                                                                                <a href="#" data-toggle="collapse" data-target="#collapseOneA">Fie-Fie</a>
+                                                                                <p>An emerging/baby queer</p>
+                                                                            </div>
+                                                                                
+                                                                            <div class="col-sm-12 media float-left vote">
+                                                                                <div class="media-body">
+                                                                                    <!--Review-->
+                                                                                    <i class="far fa-laugh blue-text"> </i>
+                                                                                    <i class="far fa-smile blue-text"> </i>
+                                                                                    <i class="far fa-meh blue-text"> </i>
+                                                                                    <i class="far fa-frown blue-text"> </i>
+                                                                                    <i class="far fa-angry gray-text"> </i>
+                                                                                    <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                        
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end of word 1 -->
+                                                                <div class="card-body" id="child1">
+                                                                        <div class="card">
+                                                                            <div class="card-header">
+                                                                                <div class="col-sm-12  float-left">
+                                                                                    <a href="#" data-toggle="collapse" data-target="#collapseOneA">isiBindile</a>
+                                                                                    <p>The brave, courageous, audacious one</p>
+                                                                                </div>
+                                                                                    
+                                                                                <div class="col-sm-12 media float-left vote">
+                                                                                    <div class="media-body">
+                                                                                        <!--Review-->
+                                                                                        <i class="far fa-laugh blue-text"> </i>
+                                                                                        <i class="far fa-smile blue-text"> </i>
+                                                                                        <i class="far fa-meh blue-text"> </i>
+                                                                                        <i class="far fa-frown blue-text"> </i>
+                                                                                        <i class="far fa-angry gray-text"> </i>
+                                                                                        <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                            
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- end of word 1 -->
+                                                                <div class="card-body" id="child1">
+                                                                        <div class="card">
+                                                                            <div class="card-header">
+                                                                                <div class="col-sm-12 float-left newWord">
+                                                                                    <a href="#" data-toggle="collapse" data-target="#collapseOneA">Serurubele</a>
+                                                                                    <p>Femme, soft, transformative, fluid, inclusive</p>
+                                                                                </div>
+                                                                                    
+                                                                                <div class="col-sm-12 media float-left vote">
+                                                                                    <div class="media-body">
+                                                                                        <!--Review-->
+                                                                                        <i class="far fa-laugh blue-text"> </i>
+                                                                                        <i class="far fa-smile blue-text"> </i>
+                                                                                        <i class="far fa-meh blue-text"> </i>
+                                                                                        <i class="far fa-frown blue-text"> </i>
+                                                                                        <i class="far fa-angry gray-text"> </i>
+                                                                                        <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                            
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                            </div>
+                                                            <!-- end of Original word-1 collaps -->
+                                                        </div>
+                                                        <!-- end of Card -->
+                                                        <div class="card">
+                            
+                                                                <div class="card-header originalWord" id="headingSix">
+                                                                    <div  class="mb-0 float-left col-sm-12 col-md-8">
+                                                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseOne">
+                                                                                <h3 class="float-left">Intersex</h3> <br>
+                                                                         </button>
+                                                                         
+                                                                    </div>
+                                                                    <div class="media float-left col-sm-12 col-md-4">
+                                                                        <div class="media-body">
+                                                                            <p>2 words / 8 comments</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- level Two - create a {nested-card-} for the new "word" related to the "Original word"-->
+                                                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                                                                    <!-- nested child div -->
+                                                                    <div class="card-body" id="child1">
+                                                                        <div class="card">
+                                                                            <div class="card-header">
+                                                                                <div class="col-sm-12 float-left newWord">
+                                                                                    <a id="word" href="#">Word 1</a>
+                                                                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</p>
+                                                                                </div>
+                                                                                
+                                                                                <div class="col-sm-12 media float-left vote">
+                                                                                    <div class="media-body">
+                                                                                         <!--Review-->
+                                                                                         <i class="far fa-laugh blue-text"> </i>
+                                                                                         <i class="far fa-smile blue-text"> </i>
+                                                                                         <i class="far fa-meh blue-text"> </i>
+                                                                                         <i class="far fa-frown blue-text"> </i>
+                                                                                         <i class="far fa-angry gray-text"> </i>
+                                                                                         <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                        
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- end of word 1 -->
+                                                                    <div class="card-body" id="child1">
+                                                                        <div class="card">
+                                                                            <div class="card-header">
+                                                                                <div class="col-sm-12 float-left newWord">
+                                                                                    <a href="#" data-toggle="collapse" data-target="#collapseOneA">Word 2</a>
+                                                                                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</p>
+                                                                                </div>
+                                                                                    
+                                                                                <div class="col-sm-12 media float-left vote">
+                                                                                    <div class="media-body">
+                                                                                        <!--Review-->
+                                                                                        <i class="far fa-laugh blue-text"> </i>
+                                                                                        <i class="far fa-smile blue-text"> </i>
+                                                                                        <i class="far fa-meh blue-text"> </i>
+                                                                                        <i class="far fa-frown blue-text"> </i>
+                                                                                        <i class="far fa-angry gray-text"> </i>
+                                                                                        <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                            
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end of Original word-1 collaps -->
+                                                            </div>
+                                                            <!-- end of Card -->
+                                                            <div class="card">
+                            
+                                                                    <div class="card-header originalWord" id="headingSeven">
+                                                                        <div  class="mb-0 float-left col-sm-12 col-md-8">
+                                                                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseOne">
+                                                                                    <h3 class="float-left">Asexual</h3> <br>
+                                                                             </button>
+                                                                             
+                                                                        </div>
+                                                                        <div class="media float-left col-sm-12 col-md-4">
+                                                                            <div class="media-body">
+                                                                                <p>2 words / 8 comments</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- level Two - create a {nested-card-} for the new "word" related to the "Original word"-->
+                                                                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                                                                        <!-- nested child div -->
+                                                                        <div class="card-body" id="child1">
+                                                                            <div class="card">
+                                                                                <div class="card-header">
+                                                                                    <div class="col-sm-12 float-left newWord">
+                                                                                        <a id="word" href="#">uThando</a>
+                                                                                        <p>Showing Love</p>
+                                                                                    </div>
+                                                                                    
+                                                                                    <div class="col-sm-12 media float-left vote">
+                                                                                        <div class="media-body">
+                                                                                             <!--Review-->
+                                                                                             <i class="far fa-laugh blue-text"> </i>
+                                                                                             <i class="far fa-smile blue-text"> </i>
+                                                                                             <i class="far fa-meh blue-text"> </i>
+                                                                                             <i class="far fa-frown blue-text"> </i>
+                                                                                             <i class="far fa-angry gray-text"> </i>
+                                                                                             <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                            
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- nested child div -->
+                                                                        <div class="card-body" id="child1">
+                                                                                <div class="card">
+                                                                                    <div class="card-header">
+                                                                                        <div class="col-sm-12 float-left newWord">
+                                                                                            <a id="word" href="#">Ndiyaku Ncanywa</a>
+                                                                                            <p>I'm into you/I like you</p>
+                                                                                        </div>
+                                                                                        
+                                                                                        <div class="col-sm-12 media float-left vote">
+                                                                                            <div class="media-body">
+                                                                                                 <!--Review-->
+                                                                                                 <i class="far fa-laugh blue-text"> </i>
+                                                                                                 <i class="far fa-smile blue-text"> </i>
+                                                                                                 <i class="far fa-meh blue-text"> </i>
+                                                                                                 <i class="far fa-frown blue-text"> </i>
+                                                                                                 <i class="far fa-angry gray-text"> </i>
+                                                                                                 <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                                
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        <!-- end of word 1 -->
+                                                                        <div class="card-body" id="child1">
+                                                                            <div class="card">
+                                                                                <div class="card-header">
+                                                                                    <div class="col-sm-12 float-left newWord">
+                                                                                        <a href="#" data-toggle="collapse" data-target="#collapseOneA">Smaak</a>
+                                                                                        <p>To like</p>
+                                                                                    </div>
+                                                                                        
+                                                                                    <div class="col-sm-12 media float-left vote">
+                                                                                        <div class="media-body">
+                                                                                            <!--Review-->
+                                                                                            <i class="far fa-laugh blue-text"> </i>
+                                                                                            <i class="far fa-smile blue-text"> </i>
+                                                                                            <i class="far fa-meh blue-text"> </i>
+                                                                                            <i class="far fa-frown blue-text"> </i>
+                                                                                            <i class="far fa-angry gray-text"> </i>
+                                                                                            <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                                
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- end of Original word-1 collaps -->
+                                                                </div>
+                                                                <!-- end of Card -->
+                                                                <div class="card">
+                            
+                                                                        <div class="card-header originalWord" id="headingEight">
+                                                                            <div  class="mb-0 float-left col-sm-12 col-md-8">
+                                                                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseOne">
+                                                                                        <h3 class="float-left">Pansexual</h3> <br>
+                                                                                 </button>
+                                                                                 
+                                                                            </div>
+                                                                            <div class="media float-left col-sm-12 col-md-4">
+                                                                                <div class="media-body">
+                                                                                    <p>2 words / 8 comments</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- level Two - create a {nested-card-} for the new "word" related to the "Original word"-->
+                                                                        <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                                                                            <!-- nested child div -->
+                                                                            <div class="card-body" id="child1">
+                                                                                <div class="card">
+                                                                                    <div class="card-header">
+                                                                                        <div class="col-sm-12 float-left newWord">
+                                                                                            <a id="word" href="#">Word 1</a>
+                                                                                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</p>
+                                                                                        </div>
+                                                                                        
+                                                                                        <div class="col-sm-12 media float-left vote">
+                                                                                            <div class="media-body">
+                                                                                                 <!--Review-->
+                                                                                                 <i class="far fa-laugh blue-text"> </i>
+                                                                                                 <i class="far fa-smile blue-text"> </i>
+                                                                                                 <i class="far fa-meh blue-text"> </i>
+                                                                                                 <i class="far fa-frown blue-text"> </i>
+                                                                                                 <i class="far fa-angry gray-text"> </i>
+                                                                                                 <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                                
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- end of word 1 -->
+                                                                            <div class="card-body" id="child1">
+                                                                                <div class="card">
+                                                                                    <div class="card-header">
+                                                                                        <div class="col-sm-12 float-left newWord">
+                                                                                            <a href="#" data-toggle="collapse" data-target="#collapseOneA">Word 2</a>
+                                                                                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.</p>
+                                                                                        </div>
+                                                                                            
+                                                                                        <div class="col-sm-12 media float-left vote">
+                                                                                            <div class="media-body">
+                                                                                                <!--Review-->
+                                                                                                <i class="far fa-laugh blue-text"> </i>
+                                                                                                <i class="far fa-smile blue-text"> </i>
+                                                                                                <i class="far fa-meh blue-text"> </i>
+                                                                                                <i class="far fa-frown blue-text"> </i>
+                                                                                                <i class="far fa-angry gray-text"> </i>
+                                                                                                <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                                                    
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- end of Original word-1 collaps -->
+                                                                    </div>
+                                                                    <!-- end of Card -->
+                                        <div class="card">
+                            
+                                                <div class="card-header originalWord" id="headingNine">
+                                                    <div  class="mb-0 float-left col-sm-6 col-md-8">
+                                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseTwo">
+                                                                <h3 class="float-left">Other</h3> <br>
+                                                         </button>
+                                                    </div>
+                                                    <div class="media float-left col-sm-6 col-md-4">
+                                                        <div class="media-body">
+                                                            <p>3 words / 5 comments</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- level Two - create a {nested-card-} for the new "word" related to the "Original word"-->
+                                                <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+                                                    <!-- nested child div -->
+                                                    <div class="card-body" id="child2">
+                                                        <div class="card">
+                                                            <div class="card-header">
+                                                                <div class="col-sm-12 col-md-8 float-left newWord">
+                                                                    <a href="#" data-toggle="modal" data-target="#myModal">Inkonzo</a>
+                                                                    <p>Church</p>
+                                                                </div>
+                                                                
+                                                                <div class="col-sm-12 col-md-4 media float-left vote">
+                                                                    <div class="media-body" data-parent="#child2">
+                                                                         <!--Review-->
+                                                                         <i class="far fa-laugh blue-text"> </i>
+                                                                         <i class="far fa-smile blue-text"> </i>
+                                                                         <i class="far fa-meh blue-text"> </i>
+                                                                         <i class="far fa-frown blue-text"> </i>
+                                                                         <i class="far fa-angry gray-text"> </i>
+                                                                         <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                        
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- nested child div -->
+                                                    <div class="card-body" id="child2">
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <div class="col-sm-12 col-md-8 float-left newWord">
+                                                                        <a href="#" data-toggle="modal" data-target="#myModal">Mafungwashe</a>
+                                                                        <p>The first born woman heir who has been given a promise to hold onto</p>
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-sm-12 col-md-4 media float-left vote">
+                                                                        <div class="media-body" data-parent="#child2">
+                                                                             <!--Review-->
+                                                                             <i class="far fa-laugh blue-text"> </i>
+                                                                             <i class="far fa-smile blue-text"> </i>
+                                                                             <i class="far fa-meh blue-text"> </i>
+                                                                             <i class="far fa-frown blue-text"> </i>
+                                                                             <i class="far fa-angry gray-text"> </i>
+                                                                             <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- nested child div -->
+                                                    <div class="card-body" id="child2">
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <div class="col-sm-12 col-md-8 float-left newWord">
+                                                                        <a href="#" data-toggle="modal" data-target="#myModal">iQhawe</a>
+                                                                        <p>Icon</p>
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-sm-12 col-md-4 media float-left vote">
+                                                                        <div class="media-body" data-parent="#child2">
+                                                                             <!--Review-->
+                                                                             <i class="far fa-laugh blue-text"> </i>
+                                                                             <i class="far fa-smile blue-text"> </i>
+                                                                             <i class="far fa-meh blue-text"> </i>
+                                                                             <i class="far fa-frown blue-text"> </i>
+                                                                             <i class="far fa-angry gray-text"> </i>
+                                                                             <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- nested child div -->
+                                                    <div class="card-body" id="child2">
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <div class="col-sm-12 col-md-8 float-left newWord">
+                                                                        <a href="#" data-toggle="modal" data-target="#myModal">Makazi</a>
+                                                                        <p>Aunt</p>
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-sm-12 col-md-4 media float-left vote">
+                                                                        <div class="media-body" data-parent="#child2">
+                                                                             <!--Review-->
+                                                                             <i class="far fa-laugh blue-text"> </i>
+                                                                             <i class="far fa-smile blue-text"> </i>
+                                                                             <i class="far fa-meh blue-text"> </i>
+                                                                             <i class="far fa-frown blue-text"> </i>
+                                                                             <i class="far fa-angry gray-text"> </i>
+                                                                             <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- nested child div -->
+                                                    <div class="card-body" id="child2">
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <div class="col-sm-12 col-md-8 float-left newWord">
+                                                                        <a href="#" data-toggle="modal" data-target="#myModal">Motho</a>
+                                                                        <p>Human Being</p>
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-sm-12 col-md-4 media float-left vote">
+                                                                        <div class="media-body" data-parent="#child2">
+                                                                             <!--Review-->
+                                                                             <i class="far fa-laugh blue-text"> </i>
+                                                                             <i class="far fa-smile blue-text"> </i>
+                                                                             <i class="far fa-meh blue-text"> </i>
+                                                                             <i class="far fa-frown blue-text"> </i>
+                                                                             <i class="far fa-angry gray-text"> </i>
+                                                                             <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- nested child div -->
+                                                    <div class="card-body" id="child2">
+                                                            <div class="card">
+                                                                <div class="card-header">
+                                                                    <div class="col-sm-12 col-md-8 float-left newWord">
+                                                                        <a href="#" data-toggle="modal" data-target="#myModal">Umuntu</a>
+                                                                        <p>Human Being</p>
+                                                                    </div>
+                                                                    
+                                                                    <div class="col-sm-12 col-md-4 media float-left vote">
+                                                                        <div class="media-body" data-parent="#child2">
+                                                                             <!--Review-->
+                                                                             <i class="far fa-laugh blue-text"> </i>
+                                                                             <i class="far fa-smile blue-text"> </i>
+                                                                             <i class="far fa-meh blue-text"> </i>
+                                                                             <i class="far fa-frown blue-text"> </i>
+                                                                             <i class="far fa-angry gray-text"> </i>
+                                                                             <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    <!-- end of word 1 -->
+                                                    <div class="card-body" id="child2">
+                                                        <div class="card">
+                                                            <div class="card-header">
+                                                                <div class="col-sm-12 col-md-8 float-left">
+                                                                    <a href="#" data-toggle="modal" data-target="#myModal">Sibongakonke</a>
+                                                                    <p>To be grateful for everything</p>
+                                                                </div>
+                                                                    
+                                                                <div class="col-sm-12 col-md-4 media float-left vote">
+                                                                    <div class="media-body">
+                                                                        <!--Review-->
+                                                                        <i class="far fa-laugh blue-text"> </i>
+                                                                        <i class="far fa-smile blue-text"> </i>
+                                                                        <i class="far fa-meh blue-text"> </i>
+                                                                        <i class="far fa-frown blue-text"> </i>
+                                                                        <i class="far fa-angry gray-text"> </i>
+                                                                        <small id="emailHelp" class="form-text text-mute">Vote for this word</small>
+                                                                            
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                   
+                                                </div>
+                                                <!-- end of Original word-1 collaps -->
+                                
+                                        </div>
+                                        
+                                    </div>
+                                    <!-- end of accordion -->
+                                </div>
+                        
+                    </div>
+                    <!-- end of modal footer -->
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save Changes</button> -->
+                    </div>
+                </div>
+
+            </div>
+            <!-- comments modal -->
+            <div class="modal-dialog modal-lg comments">
+                    <div class="modal-content">
+                
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <!-- back button -->
+                        <a href="#" id="backTowords" ><i class="fas fa-angle-double-left"></i></a>
+                        <h4 class="modal-title">Comments {word}</h4>
+                        <!-- close button -->
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                          <!-- ##### -->
+          
+                          <ul>
+                              <li class="container darker">
+                                  <span class="small time-left"><a href="#">user</a> 4 hours ago</span><br>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                                  <!-- <i class="fal fa-check"></i> -->
+                              </li>
+          
+                              <li class="container darker">
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                                  <span class="small time-left"><a href="#">user</a> 4 hours ago</span><br>
+                              </li>
+          
+                              <li class="container darker"> 
+                                  <span class="small time-left"><a href="#">user</a> Today, 11:00</span><br>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                              </li>
+          
+                              <li class="container"> 
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                                  <span class="time-right small"><a href="#">user</a> Today, 11:00</span>
+                              </li>
+          
+                              <li class="container"> 
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                                  <span class="time-right small"><a href="#">user</a> Today, 11:00</span>
+                              </li>
+
+                              <li class="container darker">
+                                    <span class="small time-left"><a href="#">user</a> 4 hours ago</span><br>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                              </li>
+
+                              <li class="container darker">
+                                     <span class="small time-left"><a href="#">user</a> 4 hours ago</span><br>
+                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                              </li>
+
+                              <li class="container darker">
+                                    <span class="small time-left"><a href="#">user</a> 4 hours ago</span><br>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut leo sollicitudin, euismod dolor et, varius quam. Etiam ac sagittis magna, eget congue dui. Nullam aliquet sapien id magna faucibus fringilla. In eget rutrum metus.</p>
+                              </li>
+          
+                          </ul>
+                          <!-- ### -->
+                      </div> 
+                      <!-- end of modal body -->
+          
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                          <!-- comment form area -->
+                          <form class="form-group shadow-textarea">
+                              <!-- <textarea name="wordComment" id="comment" rows="1" wrap="soft"></textarea> -->
+                              <input type="text" class="form-control" id="exampleFormControlTextarea6" placeholder="Write comment here...">
+                              <button type="button" class="btn btn-danger time-right" style="margin-top: 5px;">Post</button>
+                              <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Submit</button> -->
+                          </form>
+                      </div>
+                      <!-- end of footer -->
+                    </div>
+          
+                  </div>
+
+
+
+        </div>
+        <!-- End of Modal Wrap -->
+
+        <!-- *********************************** -->
+        
+        <!-- Comments Modal -->
+        <!-- The Modal -->
+      <!-- <div class="modal modal-dialog" id="commentsModal"; style="overflow-y: scroll; max-height:85%; margin-top: 50px; margin-bottom:50px;"> -->
+
+
+    </div> <!-- end of container - 2 modals inside -->
+
+        <!-- *******************Privacy Policy******************* -->
+
+        <!-- Private Policy Modal -->
+        <div class="modal fade" id="modalPolicy" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h5 class="modal-title" id="myModal">Privacy Policy</h5>
+                        <button>
+                            <span aria-hidden="true" data-dismiss="modal">&times;</span>
+                        </button>
+                    </div>
+                    <!-- modal body -->
+                    <div class="modal-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies turpis ut fringilla pretium.
+                            Nam non est id libero convallis sodales ut a arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+                            Integer in odio urna. Duis vestibulum rutrum arcu, ut placerat libero rhoncus sit amet. Morbi posuere, orci semper sodales convallis,
+                             sem massa elementum dolor, vitae pretium erat velit in arcu. Integer in nisi lectus. In pharetra magna a iaculis pellentesque.</p>
+                    </div>
+                    <!-- end of modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Agree</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--  -->
+
+        <div class="modal fade" id="modalTerms" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header text-center">
+                            <h5 class="modal-title" id="myModal">Terms & Conditiony</h5>
+                            <button>
+                                <span aria-hidden="true" data-dismiss="modal">&times;</span>
+                            </button>
+                        </div>
+                        <!-- modal body -->
+                        <div class="modal-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies turpis ut fringilla pretium.
+                                Nam non est id libero convallis sodales ut a arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+                                Integer in odio urna. Duis vestibulum rutrum arcu, ut placerat libero rhoncus sit amet. Morbi posuere, orci semper sodales convallis,
+                                 sem massa elementum dolor, vitae pretium erat velit in arcu. Integer in nisi lectus. In pharetra magna a iaculis pellentesque.</p>
+                        </div>
+                        <!-- end of modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Agree</button>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+    <!-- ***************************End of Modals****************************** -->
+
+    <!-- scroll to top -->
+    <a href="#" class="back-to-top" style="display:inline;">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <!-- back to the top errow -->
+        <script>
+                $(document).ready(function () {
+                    console.log('Document Ready()');
+                    var offset = 250;
+                    var duration = 300;
+                    $(window).scroll(function () {
+                        if ($(this).scrollTop() > offset) {
+                            $('.back-to-top').fadeIn(duration);
+                        } else {
+                            $('.back-to-top').fadeOut(duration);
+                        }
+                    });
+                    $('.back-to-top').click(function (event) {
+                        event.preventDefault();
+                        $('html, body').animate({ scrollTop: 0 }, duration);
+                        return false;
+                    })
+                });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+          <!-- Smooth Scroll -->
+        <script src="js/smooth-scroll.js"></script>
+        <script src="js/modalListWord.js"></script>
+        <!-- <script src="js/navbar.js"></script> -->
+
+        <!-- sidebar -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                    // $('.collapse.in').toggleClass('in');
+                    // $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+
+                // $('#sidebarClose').on('click', function(){
+                //     $('#sidebar').toggleClass('active');
+                // });
+
+                $('.nav-item').on('click', function(){
+                    $('#sidebar').removeClass('active');
+                    // $(window).find('#sidebar').removeClass('active');
+                    
+                });
+
+            });
+        </script>
+        <!-- smooth scrol traget -->
+        <script>
+            var scroll = new SmoothScroll('a[href*="#"]');
+        </script>
+         
+
+    </body>
+</html>

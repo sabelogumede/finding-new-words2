@@ -1,0 +1,76 @@
+#accordion {
+    padding-top: 5px;
+}
+.accordion .card-header:after {
+    font-family: 'FontAwesome';
+    content: "\f0f8";
+    float: right;
+}
+
+.accordion .card-header.collapsed:after {
+    /* symbol for "collapsed" panel */
+    content: "\f067";
+}
+.vote {
+    padding: 15px 0 0 0;
+}
+/* .vote .media-body {
+    padding-top: 15px;
+} */
+.blue-text {
+    color: blue;
+    /* color: yellow; */
+    
+}
+.gray-text {
+    color: gray;
+}
+.originalWord {
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+}
+.originalWord h3,p {
+    margin: 0 !important;
+    font-size: 1em;
+}
+
+.originalWord .btn {
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+.card .card-header {
+    /* padding: 20px 0 20px 0; */
+}
+
+
+
+
+
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+/* Mobile */
+@media (max-width: 375px) { 
+
+    #accordion {
+        padding: 5px 0 0 0;
+    }
+
+    .card .card-header {
+        padding: 0;
+    }
+    .modal-body {
+        padding: 5px;
+    }
+
+    .vote {
+        padding-right: 5;
+        padding-left: 5;
+    }
+
+}
+
+

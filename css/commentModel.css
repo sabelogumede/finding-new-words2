@@ -1,0 +1,58 @@
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+.time-left {
+    float: left;
+    color: #999;
+}
+
+/* comment text area*/
+form { width: 100%;}
+.shadow-textarea textarea.form-control::placeholder {
+    font-weight: 300;
+}
+.shadow-textarea textarea.form-control {
+padding-left: 0.8rem;
+}
+
+/* modal scroll */
+/* .modal{
+    display: block !important;
+} */
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+height: 500px;
+overflow-y: auto;
+}
+.modal-body ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-body ul li {
+    padding: 5px 0 10px 5px;
+}
+
+.modal-body p{
+    font-family: "montserrat-semibold", sans-serif;
+    font-size: 1rem;
+}
+
+
+/*  */
+
+@media (max-width: 375px) {
+  
+    /* .modal-body {
+       
+    } */
+
+    .modal-body p{
+        font-size: 0.7rem;
+    }
+
+}

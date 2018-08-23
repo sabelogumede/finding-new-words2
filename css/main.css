@@ -1,0 +1,531 @@
+  /*
+     STYLE
+*/
+@import "https://fonts.googleapis.com/css?family=Fjalla+One|Roboto:300,400,500,700,900";
+/* @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"; */
+
+/* <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto:300,400,500,700,900" rel="stylesheet"> */
+
+body {
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Fjalla One', sans-serif;
+    background: #331437;
+}
+
+#homeSection h1, h2, h3, h4, h5 {
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Fjalla One', sans-serif;
+    color: #fff;
+}
+#homeSection h1 {
+    font-weight: 700;
+    /* font-size: 8em; */
+}
+#homeSection p {
+    color: #fff !important;
+}
+#homeSection p, a {
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    /* font-weight: 300; */
+    line-height: 1.7em;
+}
+
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #4B0082;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    /* box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); */
+}
+
+.navbar-trans {
+    background: transparent; 
+}
+
+
+.navbar-btn {
+    margin: 8px 25px 8px 10px !important;
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+#backTowords {
+    padding-right: 15px;
+}
+
+/* change burger button color */
+/* .collapse button #sidebarCollapse .btn-info {
+    background-color: transparent !important;
+} */
+
+
+/* ---------------------------------------------------
+    Navbar STYLE
+----------------------------------------------------- */
+.float {
+    background-color: #4B0082;
+    overflow: hidden;
+}
+
+#topnav {
+    padding-top: 5px;
+}
+
+#topnav a {
+    float: left;
+    /* color: #f2f2f2; */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+/* social icons */
+.fab {
+    color: yellow;
+    font-size: 25px;
+}
+.fab:hover {
+    color: red;
+}
+#leftPadding .fab {
+    padding-right: 35px;
+}
+#topnav .line { 
+    border-right: 1px solid rgb(243, 243, 243);  
+}
+/* burger button */
+#sidebarCollapse .fas {
+    color: white;
+    font-size: 25px;
+}
+/* close button */
+#sidebar .fas {
+    font-size: 25px;
+}
+
+#topnav a:active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.topnav-right {
+    float: right;
+}
+
+#dv-1 img {
+    width: 100px;
+}
+
+#dv-3 {
+    margin-top: 55px;
+}
+
+/* #dv-3 btn{
+    margin-top: 55px;
+} */
+
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+#sidebar {
+    width: 450px;
+    position: fixed;
+    top: 0;
+    /* left: 0; */
+    right: -450px;
+    height: 100vh;
+    z-index: 999;
+    /* background: #7386D5; */
+    background: #fff;
+    /* color: #fff; */
+    color: black;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    /* margin-right: -250px; */
+    right: 0px;
+}
+
+#sidebar .sidebar-header a {
+    padding: 5px;
+}
+
+#sidebar .sidebar-header {
+    padding-top: 20px;
+    /* background: #6d7fcc; */
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    /* border-bottom: 1px solid #47748b; */
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar .sidebar-header {
+    margin-bottom: 120px!important;
+}
+
+#sidebar .sidebar-header a{
+    float: right;
+    padding-right: 60px;
+    letter-spacing: 2px;
+}
+#sidebar .sidebar-header a i{
+    padding-left: 20px;
+}
+
+#sidebar ul li a {
+    align-content: center;
+    padding: 20px 10px 20px 80px; 
+    font-size: 1.4em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    content: '\e259';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
+}
+a[aria-expanded="true"]::before {
+    content: '\e260';
+}
+
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.article, a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+
+/* #paragraphTwo {
+    color: #0a8df8;
+} */
+
+
+/* copy write */
+.home-content-copywrite {
+    margin-top: 7rem;
+    /* right: 9.5rem; */
+    bottom: 1rem;
+}
+
+.home-content-copywrite a {
+    font-family: "montserrat-semibold", sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: #FFFFFF;
+    position: relative;
+    display: inline-block;
+    line-height: 3rem;
+    padding-left: 2.5rem;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+/* Mobile */
+@media (max-width: 375px) { 
+   
+    #topnav .container-fluid{
+        padding: 0 5px 0 5px !important;
+    }
+
+    #topnav img {
+        width: 60px;
+    }
+
+    .navbar {
+        margin-bottom: 0;
+        padding-bottom: 0; 
+    }
+
+    #dv-2 {
+        padding-top: 0;
+    }
+
+    #dv-2 img {
+        width: 60px;
+    }
+
+    #dv-3 {
+        margin-top: 32px;
+        padding-right: 2px;
+    }
+    #dv-3 h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 0;
+    }
+
+    #dv-3 p {
+        font-size: 0.9em;
+    }
+
+    /* social icons */
+    .fab {
+        font-size: 15px;
+    }
+    #leftPadding .fab {
+        padding-right: 10px;
+    }
+
+    #topnav .line { 
+        border-right: none;  
+    }
+
+    /* Sidebar */
+    #sidebar {
+        width: 250px;
+        right: -250px;
+    }
+    #sidebar ul.components {
+        padding: 5px 0;
+        /* border-bottom: 1px solid #47748b; */
+    }
+    #sidebar .sidebar-header {
+        margin-bottom: 60px!important;
+    }
+    #sidebar ul li a {
+        padding: 10px 5px 10px 20px;
+        font-size: 0.9em;
+    }
+    #sidebar .sidebar-header a{
+        padding-right: 10px;
+        letter-spacing: 1px;
+    }
+
+    #sidebar .sidebar-header a {
+        padding: 5px 10px 5px 5px;
+        font-size: 0.9em;
+    }
+    #sidebar .fas {
+        font-size: 20px;
+    }
+
+    /* copy write */
+    .home-content-copywrite {
+        margin-top: 2rem;
+        bottom: 1rem;
+    }
+
+    .home-content-copywrite a {
+        font-size: 0.5rem;
+        letter-spacing: 0.2rem;
+        line-height: 1rem;
+        padding-left: 2.5rem;
+    }
+
+    #socialMedia h2 {
+        font-size: 1.4em;
+        margin-top: 8px;
+    }
+    /* Footer */
+
+    footer {
+        margin-top: 10px;
+        text-align: center;
+    }
+    footer p {
+        font-size: 0.7em;
+        color: #fff;
+        padding: 5px 10px 5px 10px;
+    }
+    /* Modal */
+    .modal p {
+        font-size: 0.6rem;
+        font-family: 'Roboto', sans-serif;
+    }
+    .modal h5 {
+        font-size: 0.9rem;
+        font-family: 'Roboto', sans-serif;
+    }
+    /* .container {
+        padding: 0px !important;
+    } */
+    .modal.full {
+        max-height: 90% !important;
+    }
+    .modal-title {
+        font-size: 1em;
+    }
+    .form-group{
+        margin-bottom: 0.7em;
+    }
+ 
+
+
+ }
+
+ /* mid size */
+ @media (max-width: 520px) and (min-width: 376px) {
+    
+    #dv-2 img {
+        width: 80px;
+    }
+
+    .navbar {
+        margin-bottom: 0;
+    }
+ }
+
+ /* Small devices (landscape phones, 576px and up) */
+/* @media (min-width: 576px) {  } */
+
+/* Ipads/Tablets */
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+     /* social icons */
+     /* .fab {
+        font-size: 15px;
+    } */
+    /* #leftPadding .fab {
+        padding-right: 10px;
+    } */
+
+    /* .topnav .line { 
+        border-right: none;  
+    } */
+    
+
+    #row {
+        margin-top: 50px;
+    }
+
+    #dv-3 {
+        margin-top: 80px;
+    }
+
+    #dv-2 {
+        padding-top: 100px;
+    }
+
+    #dv-2 img {
+        width: 120px;
+    }
+
+    #dv-3 h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+
+    #dv-3 p {
+        font-size: 1.3em;
+    }
+
+    /* ################## */
+    #sidebar {
+        margin-right: -250px;
+    }
+    #sidebar.active {
+        margin-right: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
+ /* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) {  } */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
+
+/* Large Screen */
+@media (min-width: 1366px) { 
+
+    h1 {
+        /* font-weight: 700; */
+        font-size: 4em;
+    }
+
+    #row {
+        margin-top: 0;
+    }
+
+    /* #dv-1 .col-sm-2 {
+        padding-right: 0 !important;
+    } */
+
+    #dv-2 {
+        padding-top: 50px;
+        padding-top: 10px;
+    }
+
+    #dv-2 img {
+        width: 130px;
+    }
+
+    #dv-3 h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+    }
+
+    #dv-3 {
+        margin-top: 100px;
+    }
+
+
+ }
+
+
+

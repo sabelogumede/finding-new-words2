@@ -1,0 +1,23 @@
+
+#homeSection{
+    height: 100vh;
+    /* margin-bottom: 100px; */
+}
+
+#homeSection button {
+    width: 200px;
+    margin-top: 40px;
+}
+
+/* Media Queries */
+
+@media (max-width: 375px) {
+
+    #homeSection button{
+        width: 150px;
+        margin-top: 30px;
+    }
+
+
+
+}
